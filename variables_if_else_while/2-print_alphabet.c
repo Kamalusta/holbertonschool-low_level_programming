@@ -10,8 +10,7 @@ int main(void)
 char str[] = "abcdefghijklmnopqrstuvwxyz";
 int i;
 int leng = strlen(str);
- 
-for(i=0;i<leng;i++)
+for (i = 0; i < leng; i++)
 {
 char c = str[i];
 putchar(c);
