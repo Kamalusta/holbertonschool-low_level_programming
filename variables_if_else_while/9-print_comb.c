@@ -15,6 +15,6 @@ putchar(',');
 putchar(' ');
 x = x + 1;
 }
-putchar(x + 1);
+putchar(57);
 return (0);
 }
