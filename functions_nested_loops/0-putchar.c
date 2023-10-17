@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 /**
  * main - Entry point
@@ -8,6 +7,12 @@
  */
 int main(void)
 {
-_putchar('p');
+char put[] = "_putchar";
+int i = 0;
+while (i < 8){
+_putchar(put[i]);
+i = i + 1;
+}
+_putchar('\n');
 return (0);
 }
