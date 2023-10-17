@@ -6,13 +6,15 @@
  */
 int main(void)
 {
-int x;
-for (x = 48; x <= 57; x++)
+int x = 48;
+
+while (x < 57)
 {
 putchar(x);
 putchar(',');
 putchar(' ');
+x = x + 1;
 }
-putchar('\n');
+putchar(x + 1);
 return (0);
 }
