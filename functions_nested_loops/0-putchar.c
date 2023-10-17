@@ -8,10 +8,6 @@
  */
 int main(void)
 {
-  _putchar('p');
+_putchar('p');
 return (0);
-}
-int _putchar(char c)
-{
-return (write(1, &c, 1));
 }
