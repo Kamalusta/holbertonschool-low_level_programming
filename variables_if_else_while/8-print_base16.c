@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
  *
@@ -7,14 +6,13 @@
  */
 int main(void)
 {
-char str[] = "abcdefghijklmnopqrstuvwxyz";
-int i;
-int leng = strlen(str);
- 
-for(i=0;i<leng;i++)
+int x;
+for (x = 0; x <= 15; x++)
 {
-char c = str[i];
-putchar(c);
+if (x < 10)
+putchar(x + 48);
+else if (x > 9)
+putchar(x + 87);
 }
 putchar('\n');
 return (0);
