@@ -15,9 +15,9 @@ return (0);
 }
 else if (n < 0)
 {
-p = n * -1;
 r = p % 10;
-_putchar('0' + r);
+p = r * -1;
+_putchar('0' + p);
 return (r);
 }
 else
