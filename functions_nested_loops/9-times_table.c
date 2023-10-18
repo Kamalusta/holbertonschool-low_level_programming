@@ -14,26 +14,21 @@ while (r < 10)
 while (c < 10)
 {
 n = r * c;
-if (c == 9 && n < 10)
+if (c == 0 && n < 1)
 _putchar('0' + n);
-else if (c == 9 && n > 9)
-{
-_putchar('0' + n / 10);
-_putchar('0' + n % 10);
-}
 else if (n < 10)
 {
-_putchar('0' + n);
 _putchar(',');
 _putchar(' ');
 _putchar(' ');
+_putchar('0' + n);
 }
 else
 {
-_putchar('0' + n / 10);
-_putchar('0' + n % 10);
 _putchar(',');
 _putchar(' ');
+_putchar('0' + n / 10);
+_putchar('0' + n % 10);
 }
 c = c + 1;
 }
