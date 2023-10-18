@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _islower - check the code gor lower case
+ *@c: The char to be cheked
  *
  * Return: Always 1 is succes.
  */
