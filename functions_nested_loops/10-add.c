@@ -1,7 +1,7 @@
 /**
  * add - check the code
- *@n - first num
- *@m - second num
+ * @n: first number
+ * @m: second number
  *
  * Return: Always result
  */
