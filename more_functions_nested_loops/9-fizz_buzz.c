@@ -31,7 +31,7 @@ printf("%s", word);
 else
 printf("%d", n);
 n++;
-if (n != 100)
+if (n != 101)
 printf(" ");
 }
 printf("\n");
