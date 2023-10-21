@@ -16,21 +16,23 @@ int b = n % 5;
 if (f == 0 && b == 0)
 {
 word = "FizzBuzz";
-printf("%s ", word);
+printf("%s", word);
 }
 else if (f == 0)
 {
 word = "Fizz";
-printf("%s ", word);
+printf("%s", word);
 }
 else if (b == 0)
 {
 word = "Buzz";
-printf("%s ", word);
+printf("%s", word);
 }
 else
-printf("%d ", n);
+printf("%d", n);
 n++;
+if (n != 100)
+printf(" ");
 }
 printf("\n");
 return (0);
