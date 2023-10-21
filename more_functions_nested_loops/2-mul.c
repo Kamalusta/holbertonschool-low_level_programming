@@ -1,7 +1,9 @@
 /**
- * main - check the code
+ * mul - check the code
+ *@a: first digit
+ *@b: second digit
  *
- * Return: Always 0.
+ * Return: multiplies.
  */
 int mul(int a, int b)
 {
