@@ -1,12 +1,13 @@
 /**
- * main - check the code.
+ * _isupper - check the code.
+ *@c: letter
  *
- * Return: Always 0.
+ * Return: Always 1 if it is true.
  */
 int _isupper(int c)
 {
-  if (c > 40 && c < 91)
-    return (1);
-  else
-    return (0);
+if (c > 64 && c < 91)
+return (1);
+else
+return (0);
 }
