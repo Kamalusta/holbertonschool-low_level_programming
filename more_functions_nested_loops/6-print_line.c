@@ -13,5 +13,4 @@ _putchar(95);
 n--;
 }
 _putchar('\n');
-return (0);
 }
