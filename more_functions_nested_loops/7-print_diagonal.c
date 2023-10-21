@@ -9,6 +9,7 @@ void print_diagonal(int n)
 {
 int m = 0;
 int k = 0;
+int nn = n;
 while (n > 0)
 {
 while (m > 0)
@@ -22,7 +23,7 @@ _putchar('\n');
 n--;
 m = k;
 }
-if (n < 1)
+if (nn < 1)
 {
 _putchar('\n');
 }
