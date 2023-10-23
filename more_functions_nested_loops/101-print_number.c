@@ -30,12 +30,14 @@ while (a > 0)
 a = a / 10;
 if (a > 0)
 c = c * 10;
+else
+_putchar('0' + n);
 }
+if (n < 0)
+_putchar('-');
 while (c > 1)
 {
 k = m / c;
-if (n < 0)
-_putchar('-');
 _putchar('0' + k);
 m = m % c;
 c = c / 10;
