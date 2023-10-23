@@ -33,7 +33,7 @@ a = a / 10;
 if (a > 0)
 c = c * 10;
 else if (c < 10)
-_putchar('0' + a);
+_putchar('0' + m);
 }
 while (c > 1)
 {
