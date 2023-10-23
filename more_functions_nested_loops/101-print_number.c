@@ -24,7 +24,11 @@ a = a / 10;
 if (a != 0)
 c = c * 10;
 else if (c < 10)
+{
+if (n < 0)
+m = m * (-1);
 _putchar('0' + m);
+}
 }
 while (c > 1)
 {
@@ -35,11 +39,11 @@ _putchar('0' + k);
 m = m % c;
 c = c / 10;
 if (m < 10 && m > -10 && c == 1)
-  {
-    if (n < 0)
+{
+if (n < 0)
 m = m * (-1);
 _putchar('0' + m);
-  }
+}
 }
 }
 }
