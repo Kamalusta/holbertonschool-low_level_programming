@@ -32,7 +32,7 @@ while (a > 0)
 a = a / 10;
 if (a > 0)
 c = c * 10;
-else (c < 10)
+else if (c < 10)
 _putchar('0' + a);
 }
 while (c > 1)
