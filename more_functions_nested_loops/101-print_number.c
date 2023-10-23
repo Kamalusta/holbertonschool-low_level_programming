@@ -21,6 +21,8 @@ else
 m = n;
 a = n;
 }
+if (n < 0)
+_putchar('-');
 if (n == 0)
 _putchar('0');
 else
@@ -31,10 +33,8 @@ a = a / 10;
 if (a > 0)
 c = c * 10;
 else
-_putchar('0' + n);
+_putchar('0' + m);
 }
-if (n < 0)
-_putchar('-');
 while (c > 1)
 {
 k = m / c;
