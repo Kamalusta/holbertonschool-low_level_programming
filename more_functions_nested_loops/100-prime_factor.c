@@ -1,24 +1,17 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - code
+ * print_number - check the code
+ *@n: given
  *
- * Return: Always 0
+ * Return: Always 0.
  */
-int main(void)
+void print_number(int n)
 {
-long int n = 612852475143;
-int r;
-int i;
-for (i = 2; i < n; i++)
-{
-r = n % i;
-if (r == 0)
-{
-n = n / i;
-i--;
-}
-}
-printf("%ld\n", n);
-return (0);
+  int i = 0;
+  while (n > 0)
+    {
+      int k = n % 10
+      _putchar(k);
+      n = n / 10;
+  
 }
