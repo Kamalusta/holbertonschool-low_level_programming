@@ -15,7 +15,7 @@ while (s[i] > 0)
 i++;
 len = i - 1;
 }
-for (i = 0; len / 2 > i; i++)
+for (i = 0; len / 2 >= i; i++)
 {
 int tmp = s[i];
 s[i] = s[len - i];
