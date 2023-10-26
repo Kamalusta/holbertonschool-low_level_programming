@@ -3,8 +3,8 @@
 
 /**
  * *_strcat - check the code
- *@dest first string
- *@src second string
+ *@dest: first string
+ *@src: second string
  *
  * Return: Always pointer
  */
@@ -16,8 +16,8 @@ while (dest[i])
 i++;
 while (src[j])
 {
-dest[i+j] = src[j];
+dest[i + j] = src[j];
 j++;
-} 
+}
 return (dest);
 }
