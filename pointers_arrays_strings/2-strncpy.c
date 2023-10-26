@@ -17,6 +17,9 @@ while (src[i] > 0)
 i++;
 for (j = 0; j < n; j++)
 {
+if (j > i)
+dest[j] = 0;
+else
 dest[j] = src[j];
 }
 /*dest[j + 1] = '\0';*/
