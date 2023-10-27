@@ -4,7 +4,7 @@
 /**
  * _strspn - check the code
  * @s: first array
- * @V: second one
+ * @accept: second one
  *
  * Return: Always int
  */
