@@ -13,12 +13,12 @@ char *_strchr(char *s, char c)
 int i, j;
 int k = 0;
 static char arr[90];
-for (i = 0; s[i]; i++)
+for (i = 0; s[i] >= 0; i++)
 {
 if (s[i] == c && k == 0)
 {
 k = 1;
-for (j = 0; s[i + j]; ++j)
+ for (j = 0; s[i + j] >= 0; j++)
 arr[j] = s[i + j];
 }
 }
