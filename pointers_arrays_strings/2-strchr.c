@@ -18,7 +18,7 @@ for (i = 0; s[i] >= 0; i++)
 if (s[i] == c && k == 0)
 {
 k = 1;
- for (j = 0; s[i + j] >= 0; j++)
+for (j = 0; s[i + j] >= 0; j++)
 arr[j] = s[i + j];
 }
 }
