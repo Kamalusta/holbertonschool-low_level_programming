@@ -4,7 +4,7 @@
 /**
  * _strstr - check the code
  * @haystack: pointer
- * @needle; pointer 2
+ * @needle: pointer 2
  *
  * Return: Always pinter to char
  */
@@ -22,7 +22,7 @@ if (needle[i] == '\0')
 break;
 }
 if (needle[i] == '\0')
-return (haystack + (j - i));
+return (haystack + (j - i + 1));
 else
 return (0);
 }
