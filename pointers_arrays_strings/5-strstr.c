@@ -15,14 +15,14 @@ int j;
 for (j = 0; haystack[j]; j++)
 {
 if (haystack[j] == needle[i])
-i++;
+++i;
 else
 i = 0;
 if (needle[i] == '\0')
 break;
 }
 if (needle[i] == '\0')
-return (haystack + (j - i + 1));
+return (haystack + (j - i));
 else
 return (0);
 }
