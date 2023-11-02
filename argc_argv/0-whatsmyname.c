@@ -5,7 +5,7 @@
  * @argc: it is void
  * @argv: all atributies
  *
- * Return Always 0. 
+ * Return: Always 0.
  */
 
 int main(int argc __attribute__((unused)), char *argv[])
