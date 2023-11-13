@@ -15,8 +15,10 @@ int i = 0;
 int i2 = 0;
 int k;
 char *str;
+if (s1 != NULL)
 while (s1[i])
 i++;
+if (s2 != NULL)
 while (s2[i2])
 i2++;
 str = malloc(sizeof(char) * (i + i2 + 1));
