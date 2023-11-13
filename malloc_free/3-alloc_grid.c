@@ -24,7 +24,11 @@ for (i = 0; i < width; i++)
 if (*(arr2d + i) == NULL)
 {
 return (NULL);
+while (i >= 0)
+{
 free(*(arr2d + i));
+i--;
+}
 free(arr2d);
 }
 }
