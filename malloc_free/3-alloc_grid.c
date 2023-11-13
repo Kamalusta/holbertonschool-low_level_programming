@@ -15,12 +15,12 @@ int i;
 int **arr2d;
 if (width <= 0 || height <= 0)
 return (NULL);
-arr2d = malloc(sizeof(int *) * width);
+arr2d = malloc(sizeof(int *) * height);
 if (arr2d == NULL)
 return (NULL);
-for (i = 0; i < width; i++)
+for (i = 0; i < height; i++)
 {
-*(arr2d + i) = malloc(sizeof(int) * height);
+*(arr2d + i) = malloc(sizeof(int) * width);
 if (*(arr2d + i) == NULL)
 {
 while (i >= 0)
