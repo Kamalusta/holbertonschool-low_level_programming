@@ -20,6 +20,10 @@ else
 while (str[i])
 i++;
 cpy = malloc(sizeof(char) * i);
+if (cpy == NULL)
+return (NULL);
+else
+{
 while (i)
 {
 cpy[j] = str[j];
@@ -27,5 +31,6 @@ i--;
 j++;
 }
 return (cpy);
+}
 }
 }
