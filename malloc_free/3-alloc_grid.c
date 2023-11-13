@@ -23,13 +23,13 @@ for (i = 0; i < width; i++)
 *(arr2d + i) = malloc(sizeof(int) * height);
 if (*(arr2d + i) == NULL)
 {
-return (NULL);
 while (i >= 0)
 {
 free(*(arr2d + i));
 i--;
 }
 free(arr2d);
+return (NULL);
 }
 }
 return (arr2d);
