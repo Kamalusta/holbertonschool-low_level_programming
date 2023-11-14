@@ -32,6 +32,6 @@ for (j = 0; j < i; j++)
 arr[j] = s1[j];
 for (j = 0; j < n; j++)
 arr[i + j] = s2[j];
-/*arr[i + j + 1] = 0;*/
+arr[i + j] = '\0';
 return (arr);
 }
