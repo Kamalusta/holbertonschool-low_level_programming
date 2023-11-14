@@ -11,7 +11,8 @@
  */
 void *malloc_checked(unsigned int b)
 {
-if (!malloc(b))
+void *n;
+if (!n)
 exit(98);
-return (malloc(b));
+return (n);
 }
