@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-int mul;
+unsigned long int mul;
 if (argc < 3)
 {
 printf("Error\n");
@@ -23,7 +23,9 @@ exit(98);
 else
 {
 mul = atoi(argv[1]) * atoi(argv[2]);
-printf("%d\n", mul);
+printf("%lu\n", mul);
+free(argv[1]);
+free(argv[2]);
 }
 return (0);
 }
