@@ -10,12 +10,14 @@
 int main(int argc, char *argv[])
 {
 unsigned long int mul;
-if (argc < 3)
+if (argc != 3)
 {
 printf("Error\n");
 exit(98);
 }
-else if (!atoi(argv[1]) || !atoi(argv[2]))
+else if (argv[1][0] != '0' && argv[2][0] != '0')
+{
+if (!atoi(argv[1]) || !atoi(argv[2]))
 {
 printf("Error\n");
 exit(98);
@@ -24,8 +26,9 @@ else
 {
 mul = atoi(argv[1]) * atoi(argv[2]);
 printf("%lu\n", mul);
-free(argv[1]);
-free(argv[2]);
 }
+}
+else
+printf("0\n");
 return (0);
 }
