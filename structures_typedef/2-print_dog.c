@@ -16,9 +16,6 @@ else
 if (!d->name)
 d->name = "(nil)";
 printf("Name: %s\n", d->name);
-if (!d->age)
-printf("Age: (nil)");
-else
 printf("Age: %f\n", d->age);
 if (!d->owner)
 d->owner = "(nil)";
