@@ -1,7 +1,29 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
 
+/**
+ * _strdup - Returns pointer to newly allocated space which contains a string
+ * @str: String to be copied
+ *
+ * Return: Pointer to new string identical to str, NULL if str = NULL
+ */
+char *_strdup(char *str)
+{
+char *s;
+int i = 0;
+int len;
+if (!str)
+return (NULL);
+while (*(str + i))
+++i;
+len = i;
+s = malloc(sizeof(char) * (len + 1));
+if (!s)
+return (NULL);
+for (i = 0; i <= len; ++i)
+*(s + i) = *(str + i);
+return (s);
+}
 /**
  * new_dog - check the code
  * @name: name of dog
@@ -12,31 +34,17 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-int i = 0;
-int j;
-char *name2, *owner2;
 dog_t *dog;
-while (*(name + i))
-{
-i++;
-}
-name2 = malloc(i + 1);
-for (j = 0; j < i; j++)
-name2[j] = name[j];
-i = 0;
-while (owner[i])
-i++;
-owner2 = malloc(i + 1);
-for (j = 0; j < i; j++)
-owner2[j] = owner[j];
 dog = malloc(sizeof(dog_t));
 if (!dog)
 return (NULL);
-dog->name = name2;
+dog->name = _strdup(name);
+if (!(dog->name))
+return (free(dog), NULL);
 dog->age = age;
-dog->owner = owner2;
+dog->owner = _strdup(owner);
+if (!(dog->owner))
+return (free(dog->name), free(dog), NULL);
 return (dog);
-free(dog);
-free(name2);
-free(owner2);
+
 }
