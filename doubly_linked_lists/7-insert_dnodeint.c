@@ -16,20 +16,21 @@ dlistint_t *newnode = malloc(sizeof(dlistint_t));
 if (!newnode)
 return (NULL);
 newnode->n = n;
+ if (!(*h))
+   {
+     *h = newnode;
+     return (newnode);
+     }
 for (i = 0; i < idx; i++)
 {
 last = last->next;
 if (!last)
 return (NULL);
 }
-newnode->next = last;
-if (last->prev)
-{
-last->prev->next = newnode;
-last->prev = newnode;
-newnode->prev = last->prev->prev;
-}
-else
-newnode->prev = NULL;
-return (newnode);
-}
+ newnode->next = last;
+ newnode->prev = last->prev;
+ last->prev = newnode;
+ if (newnode->prev)
+   newnode->prev->next = newnode;
+ return (newnode);
+ }
