@@ -23,7 +23,7 @@ return (newnode);
 }
 for (i = 0; i < idx; i++)
 {
-if (!last->next)
+if (!last)
 return (NULL);
 last = last->next;
 }
