@@ -23,9 +23,9 @@ return (newnode);
 }
 for (i = 0; i < idx; i++)
 {
-last = last->next;
 if (!last)
 return (NULL);
+last = last->next;
 }
 newnode->next = last;
 newnode->prev = last->prev;
@@ -33,6 +33,6 @@ last->prev = newnode;
 if (newnode->prev)
 newnode->prev->next = newnode;
 else
-*h = newnode;   
+*h = newnode;
 return (newnode);
 }
