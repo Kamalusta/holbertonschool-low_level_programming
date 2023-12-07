@@ -21,6 +21,13 @@ if (!(*h))
 *h = newnode;
 return (newnode);
 }
+while (last->next)
+{
+last = last->next;
+i++;
+}
+if (idx >= i)
+return (NULL);
 for (i = 0; i < idx; i++)
 {
 if (!last->next)
