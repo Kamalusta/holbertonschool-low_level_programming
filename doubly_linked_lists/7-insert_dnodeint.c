@@ -28,6 +28,7 @@ i++;
 }
 if (idx >= i)
 return (NULL);
+last = (*h);
 for (i = 0; i < idx; i++)
 {
 if (!last->next)
