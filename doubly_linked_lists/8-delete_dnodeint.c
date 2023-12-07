@@ -13,7 +13,7 @@ size_t i = 0;
 dlistint_t *current = (*head);
 if ((*head) == NULL)
 return (-1);
- for (i = 0; i < index; i++)
+for (i = 0; i < index; i++)
 {
 current = current->next;
 if (!current)
