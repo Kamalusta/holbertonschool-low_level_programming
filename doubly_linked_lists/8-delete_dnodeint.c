@@ -13,6 +13,12 @@ size_t i = 0;
 dlistint_t *current = (*head);
 if ((*head) == NULL)
 return (-1);
+ for (i = 0; i < index; i++)
+{
+current = current->next;
+if (!current)
+return (-1);
+}
 if (!(*head)->next)
 {
 (*head) = NULL;
@@ -24,12 +30,6 @@ if (index == 0)
 free(*head);
 (*head) = (*head)->next;
 return (1);
-}
-for (i = 0; i < index; i++)
-{
-current = current->next;
-if (!current)
-return (-1);
 }
 current->prev->next = current->next;
 current->next->prev = current->prev;
