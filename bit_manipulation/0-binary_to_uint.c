@@ -12,7 +12,7 @@ int len, j = 0;
 unsigned int n, p = 1;
 if (!b)
 return (0);
-while(b[j])
+while (b[j])
 j++;
 len = j - 1;
 if (b[len] == '1')
@@ -27,7 +27,7 @@ if (b[len - j] != '0' && b[len - j] != '1')
 return (0);
 p *= 2;
 if (b[len - j] == '1')
-n = n + p;
-}	
-  return (n);
+n += p;
+}
+return (n);
 }
