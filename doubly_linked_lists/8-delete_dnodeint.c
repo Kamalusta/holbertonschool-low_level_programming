@@ -1,38 +1,63 @@
 #include "lists.h"
+/**
+ * dlistint_len - Returns number of elements in linked list
+ * @h: Pointer to first node of linked list
+ *
+ * Return: Number of elements in linked list
+ */
+size_t dlistint_len(const dlistint_t *h)
+{
+const dlistint_t *current;
+size_t n;
+current = h;
+n = 0;
+while (current)
+{
+current = current->next;
+++n;
+}
+return (n);
+}
 
 /**
- * delete_dnodeint_at_index - check the code
- * @head: - head node
- * @index: - index node
+ * delete_dnodeint_at_index - Deletes the node at index
+ * @head: Pointer to a pointer of first node
+ * @index: Index of node that should be deleted starting at 0
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: 1 on success or -1 on failure
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-size_t i = 0;
-dlistint_t *current = (*head);
-if ((*head) == NULL)
+dlistint_t *current, *tmp;
+unsigned int i;
+if (!*head || index > dlistint_len(*head))
 return (-1);
-for (i = 0; i < index; i++)
+tmp = *head;
+current = *head;
+i = 1;
+while (i < index)
 {
-current = current->next;
-if (!current)
+if (!tmp)
 return (-1);
+++i;
+tmp = tmp->next;
 }
-if (!(*head)->next)
+if (index)
 {
-(*head) = NULL;
-return (1);
-}
-if (index == 0)
+current = tmp->next;
+tmp->next = current->next;
+if (tmp->next)
 {
-(*head)->next->prev = NULL;
-free(*head);
-(*head) = (*head)->next;
-return (1);
+tmp = tmp->next;
+tmp->prev = current->prev;
 }
-current->prev->next = current->next;
-current->next->prev = current->prev;
+}
+else
+{
+*head = (*head)->next;
+if (*head)
+(*head)->prev = NULL;
+}
 free(current);
 return (1);
 }
