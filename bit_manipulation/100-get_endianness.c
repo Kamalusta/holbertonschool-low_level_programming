@@ -10,7 +10,6 @@ unsigned int n = 1;
 char *i = (char *)&n;
 if (*i == 1)
 return (1);
-}
 else
 return (0);
 }
