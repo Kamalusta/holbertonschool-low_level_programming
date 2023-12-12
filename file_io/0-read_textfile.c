@@ -23,7 +23,7 @@ rd = read(fd, buffer, letters);
 if (rd < 0)
 return (0);
 buffer[rd] = '\0';
-wr = write(STDIN_FILENO, buffer, wr);
+wr = write(STDIN_FILENO, buffer, rd);
 if (wr < 0 || wr != (int)letters)
 return (0);
 close(fd);
