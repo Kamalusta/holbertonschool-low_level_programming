@@ -24,9 +24,9 @@ if (rd < 0)
 return (0);
 buffer[rd] = '\0';
 wr = write(STDIN_FILENO, buffer, rd);
-if (wr < 0 || wr != (int)letters)
+if (wr < 0)
 return (0);
 close(fd);
 free(buffer);
-return (rd);
+return (wr);
 }
