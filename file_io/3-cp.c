@@ -9,31 +9,28 @@
  */
 int main(int ac, char **av)
 {
-int fd, fd1, rd, wr;
-char *buf = malloc(strlen(av[1]));
+int fd, fd1, rd;
+char buf[1024];
 if (ac != 3)
-{
-exit(97);
-dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-}
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 fd = open(av[1], O_RDONLY);
-rd = read(fd, buf, strlen(av[1]));
-if (!av[1] || fd == -1 || rd == -1)
+if (f1 < 0)
 {
-exit(98);
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+exit(98);
 }
-fd1 = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
-wr = write(fd1, buf, strlen(av[1]));
-if (fd1 == -1 || wr == -1)
+fd1 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+while ((rd = read(fd, buf, 1024)) > 0)
+if ((write(fd1, buf, rd)) != rd || fd1 < 0)
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
+if (rd < 0)
 {
-exit(99);
-dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", av[2]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+exit(98);
 }
-if (close(fd) == -1)
-{
-exit(100);
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-}
+if (close(fd))
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd), exit(100);
+if (close(fd1))
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1), exit(100);
 return (0);
 }
