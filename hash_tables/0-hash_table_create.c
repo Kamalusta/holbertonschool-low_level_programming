@@ -13,8 +13,11 @@ myht = malloc(sizeof(hash_table_t));
 if (!myht)
 return (NULL);
 myht->size = size;
-myht->array = malloc(sizeof(hash_node_t) * size);
+myht->array = malloc(size * sizeof(hash_node_t *));
 if (!myht->array)
+{
+free(myht);
 return (NULL);
+}
 return (myht);
 }
