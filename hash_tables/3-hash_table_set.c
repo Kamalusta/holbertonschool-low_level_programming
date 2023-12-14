@@ -19,6 +19,7 @@ if (ht->array[mykey] != 0)
 {
 if (!strcmp(ht->array[mykey]->key, key))
 {
+free(ht->array[mykey]->value);
 ht->array[mykey]->value = strdup(value);
 return (1);
 }
